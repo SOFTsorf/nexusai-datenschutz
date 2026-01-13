@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS AI - Datenschutz & Kontakt</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        h1, h2 { color: #2c3e50; }
+        .highlight { color: #3498db; font-weight: bold; }
+        
+        /* Kontaktformular Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="text-align: center; margin-bottom: 40px;">
+        <h1>NEXUS AI</h1>
+        <p>Intelligenz trifft auf absolute Privatsphäre.</p>
+    </header>
+
+    <section id="privacy">
+        <h2>Datenschutzerklärung</h2>
+        <p>Der Schutz Ihrer Daten ist das Kernstück von <span class="highlight">NEXUS AI</span>. Unsere Architektur basiert auf maximaler Datensparsamkeit.</p>
+        
+        <h3>1. Lokale Speicherung</h3>
+        <p>NEXUS AI speichert keine Daten auf externen Servern. Alle Eingaben und Verläufe verbleiben ausschließlich in Ihrem Browser (**Local Storage**). Sobald Sie Ihren Browserverlauf oder die Website-Daten löschen, sind alle Informationen unwiderruflich entfernt.</p>
+
+        <h3>2. Keine Datenweitergabe</h3>
+        <p>Ihre Daten werden nicht zu Trainingszwecken verwendet und niemals an Dritte weitergegeben. Was in NEXUS AI passiert, bleibt auf Ihrem Gerät.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontaktieren Sie uns</h2>
+        <p>Haben Sie Fragen zu NEXUS AI? Nutzen Sie das Formular unten.</p>
+        
+        <form action="https://formspree.io/f/boxenjob5@gmail.com" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Ihr Name" required>
+
+            <label for="email">E-Mail Adresse</label>
+            <input type="email" name="_replyto" id="email" placeholder="ihre@email.de" required>
+
+            <label for="message">Nachricht</label>
+            <textarea name="message" id="message" rows="5" placeholder="Ihre Nachricht an uns..." required></textarea>
+
+            <button type="submit">Nachricht senden</button>
+        </form>
+    </section>
+
+    <footer style="text-align: center; font-size: 0.9em; color: #7f8c8d;">
+        <p>&copy; 2026 NEXUS AI. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>
