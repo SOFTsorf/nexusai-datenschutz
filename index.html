@@ -5,94 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS AI - Datenschutz & Kontakt</title>
     <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --dark: #1a1a2e;
+            --light: #ffffff;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f7f6;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
         section {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+            background: var(--light);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
         }
-        h1, h2 { color: #2c3e50; }
-        .highlight { color: #3498db; font-weight: bold; }
+        h1 { color: var(--dark); text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { color: var(--secondary); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .nexus-brand { font-weight: bold; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        /* Kontaktformular Styling */
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
+        /* Formular Styling */
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--dark); }
         input, textarea {
+            width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
             font-size: 16px;
+            box-sizing: border-box; /* Wichtig für Padding */
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
         }
         button {
-            background-color: #3498db;
+            width: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
-            padding: 12px;
+            padding: 15px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 18px;
-            transition: background 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(58, 123, 213, 0.3);
+            transition: transform 0.2s;
         }
-        button:hover {
-            background-color: #2980b9;
-        }
+        button:hover { transform: translateY(-2px); }
+        
+        .privacy-note { font-size: 0.85em; color: #777; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-    <header style="text-align: center; margin-bottom: 40px;">
-        <h1>NEXUS AI</h1>
-        <p>Intelligenz trifft auf absolute Privatsphäre.</p>
+    <header>
+        <h1><span class="nexus-brand">NEXUS AI</span></h1>
+        <p style="text-align: center; color: #555;">Sicherheit durch lokale Intelligenz.</p>
     </header>
 
-    <section id="privacy">
+    <section>
         <h2>Datenschutzerklärung</h2>
-        <p>Der Schutz Ihrer Daten ist das Kernstück von <span class="highlight">NEXUS AI</span>. Unsere Architektur basiert auf maximaler Datensparsamkeit.</p>
+        <p>Willkommen bei <strong>NEXUS AI</strong>. Ihre Privatsphäre ist bei uns nicht nur eine Einstellung, sondern das technische Fundament.</p>
         
-        <h3>1. Lokale Speicherung</h3>
-        <p>NEXUS AI speichert keine Daten auf externen Servern. Alle Eingaben und Verläufe verbleiben ausschließlich in Ihrem Browser (**Local Storage**). Sobald Sie Ihren Browserverlauf oder die Website-Daten löschen, sind alle Informationen unwiderruflich entfernt.</p>
+        <h3>Lokale Autonomie</h3>
+        <p>Sämtliche Verarbeitungsprozesse finden ausschließlich in Ihrem Webbrowser statt. Wir nutzen den <strong>LocalStorage</strong> Ihres Geräts, um Daten zwischenzuspeichern. Diese Daten werden niemals an unsere Server oder Dritte übertragen.</p>
 
-        <h3>2. Keine Datenweitergabe</h3>
-        <p>Ihre Daten werden nicht zu Trainingszwecken verwendet und niemals an Dritte weitergegeben. Was in NEXUS AI passiert, bleibt auf Ihrem Gerät.</p>
+        <h3>Kontaktformular & Daten</h3>
+        <p>Wenn Sie uns über das untenstehende Formular kontaktieren, werden die von Ihnen angegebenen Daten (Name, E-Mail, Nachricht) zwecks Bearbeitung der Anfrage an uns übermittelt. Wir nutzen diese Daten ausschließlich für die Kommunikation mit Ihnen.</p>
     </section>
 
     <section id="contact">
-        <h2>Kontaktieren Sie uns</h2>
-        <p>Haben Sie Fragen zu NEXUS AI? Nutzen Sie das Formular unten.</p>
-        
+        <h2>Kontakt aufnehmen</h2>
         <form action="https://formspree.io/f/boxenjob5@gmail.com" method="POST">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Ihr Name" required>
+            <input type="hidden" name="_deploy_key" value="c85acc6eb42d4c1bbc7a12d59edba73a">
+            
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Wie dürfen wir Sie nennen?" required>
+            </div>
 
-            <label for="email">E-Mail Adresse</label>
-            <input type="email" name="_replyto" id="email" placeholder="ihre@email.de" required>
+            <div class="form-group">
+                <label for="email">E-Mail Adresse</label>
+                <input type="email" id="email" name="email" placeholder="ihre@mail.de" required>
+            </div>
 
-            <label for="message">Nachricht</label>
-            <textarea name="message" id="message" rows="5" placeholder="Ihre Nachricht an uns..." required></textarea>
+            <div class="form-group">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="5" placeholder="Was können wir für Sie tun?" required></textarea>
+            </div>
 
-            <button type="submit">Nachricht senden</button>
+            <button type="submit">Nachricht sicher senden</button>
+            <p class="privacy-note">Mit Klick auf "Senden" akzeptieren Sie die Übermittlung Ihrer Nachricht an boxenjob5@gmail.com.</p>
         </form>
     </section>
 
-    <footer style="text-align: center; font-size: 0.9em; color: #7f8c8d;">
-        <p>&copy; 2026 NEXUS AI. Alle Rechte vorbehalten.</p>
+    <footer style="text-align: center; padding: 20px; color: #666;">
+        <p>&copy; 2026 NEXUS AI - Private AI Solutions</p>
     </footer>
 
 </body>
